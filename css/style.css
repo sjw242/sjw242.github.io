@@ -1,0 +1,113 @@
+body{
+    margin: 0px;
+    overflow: hidden;   /* 넘치는부분을 숨김 */
+    background-color: black;
+}
+
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: fadein 2s;       /* 크롬 전용 -webkit- */
+}
+
+@-webkit-keyframes fadein {
+    from {
+        transform: scale(1.2, 1.2);
+        opacity: 0.3;
+    } to{
+        transform: scale(1.0, 1.0);
+        opacity: 1;
+    }
+}
+
+#center{
+    /* 부모 엘리먼트 위치 기준으로 완전히 정 가운데 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    z-index: 1;     /* 우선순위. 가장 위로 올린다 */
+}
+
+#weather{
+    position: absolute;
+    right: 0px;
+    margin: 10px;
+    margin-right: 20px;
+    color: white;
+    font-size:20px;
+    z-index: 1;
+}
+
+#clock{
+    text-align: center;
+    font-size:150px;
+    font-family: "맑은 고딕";
+    color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+input{
+    color:white;
+    width: 100%;
+    height: 18px;
+    font-size: 18px;
+    caret-color: white;
+    border:none;
+    border-left:0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 3px solid white;
+    background: transparent;
+}
+
+input::placeholder{
+    color:white;
+}
+
+.input{
+    margin: auto;
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: "맑은 고딕";
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+button {
+    border: none;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: red;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+  }
+
+
