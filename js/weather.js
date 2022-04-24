@@ -8,7 +8,7 @@ function onGeoOk(position){
     .then((data) => {
         const weather = document.querySelector("#weather span");
         
-        weather.innerText = `${data.main.temp}℃ / ${data.name}`;
+        weather.innerText = `${Math.floor(data.main.temp)}℃ / ${data.name}`;
         
     });
 }
